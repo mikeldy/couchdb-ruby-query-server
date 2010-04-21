@@ -22,7 +22,7 @@ module CouchDB
   
     def map(doc)
       map_functions.map do |func|
-        MapRunner.new(func).run(doc)
+        MapRunner.new(func).run(doc).to_a
         # runner = MapRunner.new
         # runner.instance_exec(doc, &func)
         # runner.results
