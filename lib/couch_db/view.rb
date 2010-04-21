@@ -37,7 +37,7 @@ module CouchDB
         super(*args)
       end
     
-      def emit(key, value)
+      def emit(key=nil, value=nil)
         @results.push([key, value])
       end
     end
